@@ -21,7 +21,13 @@ class Xml_Controller extends TinyMVC_Controller
   
   function rebuildXML()
   {
-    echo("test");
+    // Init
+    $this->load->model('db_model','objDb');
+    
+    $test = $this->objDb->readDb();
+    
+    echo($test);
+    // Read Database
   }
 }
 
