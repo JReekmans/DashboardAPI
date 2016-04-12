@@ -24,10 +24,9 @@ class Xml_Controller extends TinyMVC_Controller
     // Init
     $this->load->model('db_model','objDb');
     
-    $test = $this->objDb->readDb();
+    $DB_data = $this->objDb->readDb();
     
-    echo($test);
-    // Read Database
+    var_dump($DB_data);
   }
 }
 

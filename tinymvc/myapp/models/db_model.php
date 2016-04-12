@@ -16,7 +16,13 @@ class db_Model extends TinyMVC_Model{
     
     function readDB()
     {
-        return("dbReaded");
+        $strsql = "SELECT * FROM jobs";
+        $objPdoStmt = $this->db->pdo->prepare($strsql);
+        $objPdoStmt->execute();
+        $arrResult = $objPdoStmt->fetchall(PDO::FETCH_ASSOC);
+        
+        return($arrResult);
+        
     }
 }
 
