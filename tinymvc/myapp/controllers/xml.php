@@ -9,7 +9,7 @@
  * @company     Xerox
  * @client      Baloise
  * @copyright   2016
- * @version     v0.3
+ * @version     v0.2
  */
 
 class Xml_Controller extends TinyMVC_Controller
@@ -23,15 +23,16 @@ class Xml_Controller extends TinyMVC_Controller
   {
     // Variable
     $fixed_XML_position = "..\\baloise\dashboard\config_fixed.xml";
-    $variable_XML_position = "..\\baloise\dashboard\config.xml";
     
     // Init
     $this->load->model('db_model','objDb');
     $this->load->model('xml_model','objxml');
     
     $DB_data = $this->objDb->readDb();
-    $Variable_XML_Data = $this->objxml->rebuildXML($fixed_XML_position, $variable_XML_position, $DB_data);
-    $this->objxml->writeXML($variable_XML_position)
+    $Fixed_XML_Data = $this->objxml->readFixedXML($fixed_XML_position);
+    
+    var_dump($Fixed_XML_Data);
+        
     
   }
 }
