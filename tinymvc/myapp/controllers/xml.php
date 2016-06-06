@@ -31,7 +31,6 @@ class Xml_Controller extends TinyMVC_Controller
     
     $DB_data = $this->objDb->readDb();
     $Variable_XML_Data = $this->objxml->rebuildXML($fixed_XML_position, $variable_XML_position, $DB_data);
-    $this->objxml->writeXML($variable_XML_position)
     
   }
 }

@@ -23,8 +23,8 @@ class xml_Model extends TinyMVC_Model{
         foreach ($DB_data as $value) {
                 $xmlChild = $xml->addChild('app');
                 $xmlChild->addChild('id', $value['processname']);
-                $xmlChild->addChild('title', 'MONTHLY');
-                $xmlChild->addChild('frequency', $value['processname']);
+                $xmlChild->addChild('title', $value['processname']);
+                $xmlChild->addChild('frequency', 'MONTHLY');
                 $xmlChild->addChild('processing_type', 'MOVE_TNO');
                 $xmlChild->addChild('source_dir', 'd:\xpp\basetno\\'.$value['processname']);
                 $xmlChild->addChild('csv_dir', 'd:\xpp\csv');
@@ -34,7 +34,7 @@ class xml_Model extends TinyMVC_Model{
                 $xmlChild->addChild('report_path', 'd:\xpp\tmp\report.xml');
             }
         
-        $xml->asXml('updated.xml');
+        $xml->asXml('../baloise/dashboard/config.xml');
         var_dump($xml);
         
         return($xml);
