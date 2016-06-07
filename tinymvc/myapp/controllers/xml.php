@@ -33,6 +33,15 @@ class Xml_Controller extends TinyMVC_Controller
     $Variable_XML_Data = $this->objxml->rebuildXML($fixed_XML_position, $variable_XML_position, $DB_data);
     
   }
+  
+  function removeFromDb()
+  {
+    $removeId = $_GET['id'];
+    
+    $this->load->model('db_model','objDb');
+    
+    $this->objDb->removeId($removeId);
+  }
 }
 
 ?>
