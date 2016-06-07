@@ -39,8 +39,10 @@ class Xml_Controller extends TinyMVC_Controller
     $removeId = $_GET['id'];
     
     $this->load->model('db_model','objDb');
-    
+ 
     $this->objDb->removeId($removeId);
+    
+    $this->rebuildXML();
   }
 }
 

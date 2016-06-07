@@ -26,7 +26,7 @@ class xml_Model extends TinyMVC_Model{
                 $xmlChild->addChild('title', $value['processname']);
                 $xmlChild->addChild('frequency', 'MONTHLY');
                 $xmlChild->addChild('processing_type', 'MOVE_TNO');
-                $xmlChild->addChild('target_dir', 'd:\xpp\tno</target_dir');
+                $xmlChild->addChild('target_dir', 'd:\xpp\tno');
                 $xmlChild->addChild('source_dir', 'd:\xpp\basetno\\'.$value['processname']);
                 $xmlChild->addChild('csv_dir', 'd:\xpp\csv');
                 $xmlChild->addChild('log_base_dir', 'd:\xpp\log');
@@ -40,9 +40,6 @@ class xml_Model extends TinyMVC_Model{
         
         return($xml);
     }
-    
-    <target_dir>d:\xpp\tno</target_dir>
-
 }
 
 ?>

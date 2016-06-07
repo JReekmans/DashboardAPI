@@ -9,7 +9,7 @@
  * @company     Xerox
  * @client      Baloise
  * @copyright   2016
- * @version     v0.2
+ * @version     v0.3
  */
 
 class db_Model extends TinyMVC_Model{
